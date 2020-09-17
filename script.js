@@ -1,52 +1,44 @@
 $(document).ready(function () {
-    var apiKey = "f30e831d637c145d10b89e90fda4fd01";
+    var displayGames = $("api-result")
 
-    function searchWeather() {
-        var queryUrl = "https://api-v3.igdb.com/games/" + apiKey;
+    // var settings = {
+    //     "async": true,
+    //     "crossDomain": true,
+    //     "url": "https://api.rawg.io/api/games?dates=2019-10-10,2020-10-10&ordering=-added",
+    //     "method": "GET",
+    //     "headers": {
+    //         "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
+    //         "x-rapidapi-key": "0a549e6324mshe13a8958db253e6p1afae2jsnf6a1f9cb6e11"
+    //     }
+    // }
+
+    // $.ajax(settings).done(function (response) {
+    //     console.log(response);
+    // });
+
+    function searchGames() {
+        var queryUrl = "https://api.rawg.io/api/games?dates=2019-10-10,2020-10-10&ordering=-added"
         $.ajax({
             type: "GET",
             url: queryUrl
         })
             .then(function (response) {
                 console.log(response);
+                var games = "Game List " + displayGames;
+                var results = results.Array;
+                displayGames.append(games + results);
             })
-    }
+    };
 
-    searchWeather();
+    searchGames();
+})
 
-});
-
-$.ajax({
-    url: "http://localhost:8079/students/add/",
-    type: "POST",
-    crossDomain: true,
-    data: JSON.stringify(somejson),
-    dataType: "json",
-    success: function (response) {
-        var resp = JSON.parse(response)
-        alert(resp.status);
-    },
-    error: function (xhr, status) {
-        alert("error");
-    }
-});
+// RAWG APIs:
+// https://rawg-video-games-database.p.rapidapi.com/platforms Use to search by platform
+// https://rawg-video-games-database.p.rapidapi.com/games  Use to search by game name
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// https://api-v3.igdb.com/games/f30e831d637c145d10b89e90fda4fd01
-
-// https://api-v3.igdb.com/games?q=tetris&appid=f30e831d637c145d10b89e90fda4fd01
-
-// Note: 'where game.platforms = 48 & date > 1538129354' It is possible to use either & (AND) or | (OR) to combine filters to better define the behaviour of your query
-
+// Need:
+// 2 Serverside APIs 
+// 3rd Party framework
