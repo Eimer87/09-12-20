@@ -18,7 +18,7 @@ SO THAT I can be well informed on how to use and manipulate my game of interest
 
 ## Minimum Viable Product
 Our MVP is our Search Form which is intended to give the agregate information the user requires on the search item.
-
+![VideoGameBytes](https://user-images.githubusercontent.com/68030713/94069801-2cc65e00-fdbf-11ea-8739-3fdf03aa6da3.png)
 
 
 ### Issues
