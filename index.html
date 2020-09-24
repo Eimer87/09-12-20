@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font/ has a nice arrangment of fonts-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS/ all the css magic -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Project01</title>
+    <style>
+        /* <!--text style--> */
+        h1 {
+            padding: 10px;
+            color: #fff;
+        }
+        h5 {
+            padding: 10px;
+            color: #fff;
+        }
+
+        /* <!-- T-Row boxes (styles) to demo sizes with scale--> */
+        .row>div {
+            padding: 10px;
+            background: #ddd;
+            border: 1px solid #fff;
+            line-height: 60px;
+        }
+        #resultImage{
+            width:auto; height:100px; margin:auto;
+        }
+        .row {
+            margin: 40px auto;
+        }
+    </style>
+</head>
+
+<body>
+    
+    
+    <!--Nav Bar place holder tabs-->
+
+    <nav class="nav-wrapper red-pulse black lighten+2">
+        <div class="container">
+           <!----<a href="#" class="brand-logo">Video Game Bytes</a>-->
+            <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Bytes</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <ul class="sidenav" id="mobile-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">bytes</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!--pulsing video game bytes-->
+    <Div class="container">
+    <!--<h4>icons on buttons</h4>
+        <a href="#" class="btn pink waves-effect waves-light">
+            <span>Email</span>
+            <i class="material-icons left">email</i>
+        </a>-->
+        <form>
+            <label>
+                <h1 class="center-align z-depth-3 waves-light red pulse red darken-1">Video Game Bytes</h1>
+                <input type="text" id="game-input"></input>
+                <!-- button triggers search -->
+                <button class="btn green waves-effect waves-light">
+                    search
+                    <i class="material-icons right">search</i>
+                </button>
+            </label>
+        </form>
+        
+        <div class="row  hide">
+            <div class="col s12 m6 14 xl2 1">content</div>
+            <div class="col s12 m6 14 xl2 2">content</div>
+            <div class="col s12 m6 14 xl2 3">content</div>
+            <div class="col s12 m6 14 xl2 4">content</div>
+            <div class="col s12 m6 14 xl2 5">content</div>
+            <div class="col s12 m6 14 xl2 6">content</div>
+        </div>
+        
+                <!-- parallax -->
+        <!--<div class="parallax-container">
+            <div class="parallax">
+            <img src="ringworld alt.jpg" alt="" class="responsive-img">
+            </div>
+        </div>-->
+        <div class="hide">
+        <h5 class="z-depth-1 black pulse">Keep or Toss</h5>
+        <a href="#" class="btn-floating blue pulse">
+            <i class="material-icons">check</i>
+        </a>
+        <a href="#" class="btn-floating red pulse">
+            <i class="material-icons">cancel</i>
+        </a>
+       
+        </div>
+       
+        <!-- parallax -->
+        <div class="parallax-container">
+            <div class="parallax">
+            <img src="img/halo5.jpg" alt="" class="responsive-img">
+            </div>
+        </div>
+        
+       
+
+        <!--"z-depth-3" to make an object appear infront or behind another, the illusion of depth.-->
+        <!--<div class="container">
+        <p class="text"> </p>
+        <flow class="text">a good way to start a paragraph</flow>
+    </div>-->
+    
+
+    <!--truncate allows for a sentence to be as long as its container otherwise you'll see "..." like a preview for a paragraph.-->
+   <!-- <div class="container">
+        <p class="truncate">
+            
+        </p>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <!--Compiled and minified JavaScript/ cool stuff like parallax scrolling and such-->
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
