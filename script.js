@@ -1,9 +1,5 @@
 var inputEl = document.querySelector("#game-input");
-
 var i = 0;
-// var anything = "";
-
-
 
 $(document).ready(function () {
 
