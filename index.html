@@ -15,6 +15,11 @@
         /* <!--text style--> */
         h1 {
             padding: 10px;
+            color: #fff;
+        }
+        h5 {
+            padding: 10px;
+            color: #fff;
         }
 
         /* <!-- T-Row boxes (styles) to demo sizes with scale--> */
@@ -24,7 +29,9 @@
             border: 1px solid #fff;
             line-height: 60px;
         }
-
+        #resultImage{
+            width:auto; height:100px; margin:auto;
+        }
         .row {
             margin: 40px auto;
         }
@@ -32,18 +39,20 @@
 </head>
 
 <body>
+    
+    
     <!--Nav Bar place holder tabs-->
 
-    <nav class="nav-wrapper grey darken-2">
+    <nav class="nav-wrapper red-pulse black lighten+2">
         <div class="container">
-            <a href="#" class="brand-logo">Video Game Bytes</a>
+           <!----<a href="#" class="brand-logo">Video Game Bytes</a>-->
             <a href="#" class="sidenav-trigger" data-target="mobile-links">
                 <i class="material-icons">menu</i>
             </a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Bytes</a></li>
+                <li><a href="#">Store</a></li>
                 <li><a href="#">Login</a></li>
             </ul>
         </div>
@@ -51,71 +60,30 @@
     </nav>
     <ul class="sidenav" id="mobile-links">
         <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#">bytes</a></li>
         <li><a href="#">Contact</a></li>
     </ul>
 
     <!--pulsing video game bytes-->
     <Div class="container">
-
-
-        <h4>icons on buttons</h4>
+    <!--<h4>icons on buttons</h4>
         <a href="#" class="btn pink waves-effect waves-light">
             <span>Email</span>
             <i class="material-icons left">email</i>
-        </a>
+        </a>-->
         <form>
             <label>
-                <h1 class="center-align z-depth-3 waves-light red pulse red darken-2">Video Game Bytes</h1>
+                <h1 class="center-align z-depth-3 waves-light red pulse red darken-1">Video Game Bytes</h1>
                 <input type="text" id="game-input"></input>
                 <!-- button triggers search -->
-                <button class="btn cyan waves-effect waves-light">
+                <button class="btn green waves-effect waves-light">
                     search
                     <i class="material-icons right">search</i>
                 </button>
             </label>
         </form>
-        <h4>Icons</h4>
-        <i class="material-icons red-text">error</i>
-        <i class="material-icons yellow-text text-darken-2">warning</i>
-        <i class="material-icons grey-text">cloud</i>
-        <i class="material-icons blue-text">folder</i>
-        <h4>Icons on Floating Buttons</h4>
-        <a href="#" class="btn-floating blue pulse">
-            <i class="material-icons">add</i>
-        </a>
-        <a href="#" class="btn-floating red pulse">
-            <i class="material-icons">remove</i>
-        </a>
-        <a href="#" class="btn-floating orange pulse">
-            <i class="material-icons">edit</i>
-        </a>
-
-        <div class="row">
-            <div class="col s3 1">content</div>
-            <div class="col s3 2">content</div>
-            <div class="col s3 3">content</div>
-            <div class="col s3 4">content</div>
-            <div class="col s3 5">content</div>
-            <div class="col s3 6">content</div>
-        </div>
-        <div class="row">
-            <div class="col s6 m3 1">content</div>
-            <div class="col s6 m3 2">content</div>
-            <div class="col s6 m3 3">content</div>
-            <div class="col s6 m3 4">content</div>
-            <div class="col s6 m3 5">content</div>
-            <div class="col s6 m3 6">content</div>
-        </div>
-        <div class="row">
-            <div class="col s12 m6 14 1">content</div>
-            <div class="col s12 m6 14 2">content</div>
-            <div class="col s12 m6 14 3 ">content</div>
-            <div class="col s12 m6 14 4">content</div>
-            <div class="col s12 m6 14 5">content</div>
-            <div class="col s12 m6 14 6">content</div>
-        </div>
-        <div class="row">
+        
+        <div class="row  hide">
             <div class="col s12 m6 14 xl2 1">content</div>
             <div class="col s12 m6 14 xl2 2">content</div>
             <div class="col s12 m6 14 xl2 3">content</div>
@@ -123,20 +91,46 @@
             <div class="col s12 m6 14 xl2 5">content</div>
             <div class="col s12 m6 14 xl2 6">content</div>
         </div>
+        
+                <!-- parallax -->
+        <!--<div class="parallax-container">
+            <div class="parallax">
+            <img src="ringworld alt.jpg" alt="" class="responsive-img">
+            </div>
+        </div>-->
+        <div class="hide">
+        <h5 class="z-depth-1 black pulse">Keep or Toss</h5>
+        <a href="#" class="btn-floating blue pulse">
+            <i class="material-icons">check</i>
+        </a>
+        <a href="#" class="btn-floating red pulse">
+            <i class="material-icons">cancel</i>
+        </a>
+       
+        </div>
+       
+        <!-- parallax -->
+        <div class="parallax-container">
+            <div class="parallax">
+            <img src="img/halo5.jpg" alt="" class="responsive-img">
+            </div>
+        </div>
+        
+       
 
         <!--"z-depth-3" to make an object appear infront or behind another, the illusion of depth.-->
-
-        <p>game info, etc</p>
+        <!--<div class="container">
+        <p class="text"> </p>
         <flow class="text">a good way to start a paragraph</flow>
-    </div>
-    </Div>
+    </div>-->
+    
 
     <!--truncate allows for a sentence to be as long as its container otherwise you'll see "..." like a preview for a paragraph.-->
-    <div class="container">
+   <!-- <div class="container">
         <p class="truncate">
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.
+            
         </p>
-    </div>
+    </div> -->
 
 
 

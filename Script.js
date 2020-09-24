@@ -1,7 +1,7 @@
 var inputEl = document.querySelector("#game-input");
 
 var i = 0;
-var anything = "";
+// var anything = "";
 
 
 
@@ -9,17 +9,15 @@ $(document).ready(function () {
 
     $('.sidenav').sidenav();
 
-    searchGames;
-    inputEl.value = anything;
+
 
     var createdisplay = function (data) {
 
-        //$(".1").append("<img src=" + data.background_image + ">").attr("style", "width:25%; height:150px; margin:auto; box-size:inside;"); 
-        //======> I could not resize the image size.
-        $(".2").append("<h4>").text("Name: " + data.name);
-        $(".3").append("<h4>").text("Metacritic: " + data.metacritic);
-        $(".4").append("<h4>").text("Released: " + data.released);
-        $(".5").append("<h4>").text("Score: " + data.score);
+        $(".1").html("<img id='resultImage' src=" + data.background_image + ">");
+        $(".2").html("<h4>").text("Name: " + data.name);
+        $(".3").html("<h4>").text("Metacritic: " + data.metacritic);
+        $(".4").html("<h4>").text("Released: " + data.released);
+        $(".5").html("<h4>").text("Score: " + data.score);
 
         genreNames = "";
         var GenresList = data.genres;
@@ -28,34 +26,42 @@ $(document).ready(function () {
             console.log(GenresList[i].name);
 
         };
-        $(".6").append("<h4>").text(genreNames);
+        $(".6").html("<h4>").text(genreNames);
 
     };
 
 
-    var searchGames = function (anything) {
-        anything.preventDefault();
-        // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
+    var searchGames = function (event) {
 
-        var queryURL = "https://api.rawg.io/api/games?search=" + anything;
+        event.preventDefault();
+        // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
+ 
+    if ( inputEl.value.trim() === "") {
+        return;
+    }
+    
+        var queryURL = "https://api.rawg.io/api/games?search=" + inputEl.value;
 
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function (response) {
             var Results = response.results[i];
-
             console.log(Results);
-            createdisplay(Results);
 
+            createdisplay(Results);
 
         });
 
+        $(".row").removeClass("hide");
 
+    }
 
-    };
     // ---------------------------------------------------------
     // searchGames("portal");  <=== comment line 60 when testing to see how display works with this line 57.
+    searchGames; 
+    
+   
 
 
     // $(document).on("click", ".btn", searchGames);  //<=== this and line 60 do the same thing.
